@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Modules.Blockwishlist.Admin.xlf" source-language="en" target-language="hi" datatype="plaintext">
+    <body>
+      <trans-unit id="63a6a88c066880c5ac42394a22803ca6" approved="yes">
+        <source>Refresh</source>
+        <target state="final">पुनश्चर्या</target>
+        <note>File: modules/blockwishlist/views/templates/admin/statistics.html.twig [Line: 48]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

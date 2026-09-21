@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Admin.Shopparameters.Feature.xlf" source-language="en" target-language="hi" datatype="plaintext">
+    <body>
+      <trans-unit id="e93c33bd1341ab74195430daeb63db13" approved="yes">
+        <source>Shop name</source>
+        <target state="final">दुकान का नाम</target>
+        <note>File: modules/ps_mainmenu/ps_mainmenu.php [Line: 1404]</note>
+      </trans-unit>
+      <trans-unit id="8612579044efe457f11398b5a2377226" approved="yes">
+        <source>Titles</source>
+        <target state="final">शीर्षक</target>
+        <note>File: src/PrestaShopBundle/Resources/views/Admin/Configure/ShopParameters/CustomerSettings/Title/Blocks/form.html.twig [Line: 13]</note>
+      </trans-unit>
+      <trans-unit id="d7e637a6e9ff116de2fa89551240a94d" approved="yes">
+        <source>Visits</source>
+        <target state="final">यात्राओं</target>
+        <note>File: modules/statsforecast/statsforecast.php [Line: 228]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

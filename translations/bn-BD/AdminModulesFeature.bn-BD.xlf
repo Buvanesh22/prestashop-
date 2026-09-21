@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Admin.Modules.Feature.xlf" source-language="en" target-language="bn" datatype="plaintext">
+    <body>
+      <trans-unit id="f1206f9fadc5ce41694f69129aecac26" approved="yes">
+        <source>Configure</source>
+        <target state="final">কনফিগার করুন</target>
+        <note>File: src/PrestaShopBundle/Controller/Admin/Improve/ModuleController.php [Line: 158]</note>
+      </trans-unit>
+      <trans-unit id="53103fcc4656f55c219b600ded3c7438" approved="yes">
+        <source>Manage hooks</source>
+        <target state="final">হুক মেনেজ করুন</target>
+        <note>File: src/PrestaShopBundle/Controller/Admin/Improve/ModuleController.php [Line: 584]</note>
+      </trans-unit>
+      <trans-unit id="1311e5ddedf25a4f6cd6059cbf04c21e" approved="yes">
+        <source>Manage translations</source>
+        <target state="final">অনুবাদ ম্যানেজ করুন</target>
+        <note>File: src/PrestaShopBundle/Resources/views/Admin/Module/Includes/modal_translation_language_selector.html.twig [Line: 17]</note>
+      </trans-unit>
+      <trans-unit id="bf17ac149e2e7a530c677e9bd51d3fd2" approved="yes">
+        <source>Modules</source>
+        <target state="final">মডিউল</target>
+        <note>File: src/PrestaShopBundle/Controller/Admin/Improve/ModuleController.php [Line: 154]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

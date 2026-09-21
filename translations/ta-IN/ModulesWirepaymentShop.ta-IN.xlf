@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Modules.Wirepayment.Shop.xlf" source-language="en" target-language="ta" datatype="plaintext">
+    <body>
+      <trans-unit id="b2f40690858b404ed10e62bdf422c704" approved="yes">
+        <source>Amount</source>
+        <target state="final">தொகை</target>
+        <note>File: themes/hummingbird/modules/ps_wirepayment/views/templates/hook/payment_return.tpl [Line: 19]</note>
+      </trans-unit>
+      <trans-unit id="984482eb9ff11e6310fef641d2268a2a" approved="yes">
+        <source>Bank name</source>
+        <target state="final">வங்கி பெயர்</target>
+        <note>File: themes/hummingbird/modules/ps_wirepayment/views/templates/hook/payment_return.tpl [Line: 25]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

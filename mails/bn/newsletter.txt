@@ -1,0 +1,10 @@
+ 
+
+{shop_url}
+
+জনাব/জনাবা{নামের প্রথম অংশ} {নামের শেষ অংশ},
+
+{message}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Admin.Navigation.Notification.xlf" source-language="en" target-language="hi" datatype="plaintext">
+    <body>
+      <trans-unit id="c821206b336b401bccf058f664f8255d" approved="yes">
+        <source>Your shop is in debug mode.</source>
+        <target state="final">अपनी दुकान डिबग मोड में है।</target>
+        <note>File: src/PrestaShopBundle/Resources/views/Admin/Layout/legacy_layout.html.twig [Line: 42]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

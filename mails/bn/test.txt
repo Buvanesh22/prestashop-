@@ -1,0 +1,11 @@
+ 
+
+{shop_url}
+
+জনাব/জনাবা{নামের প্রথম অংশ} {নামের শেষ অংশ},
+
+Here is a test email from your shop.
+If you can read this, it means the test is successful!
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

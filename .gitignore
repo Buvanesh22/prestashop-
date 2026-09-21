@@ -1,0 +1,37 @@
+# Environment & sensitive credentials
+.env
+.env.local
+/app/config/parameters.php
+/app/config/parameters.yml
+/config/settings.inc.php
+
+# Cache, logs, and temporary files
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+/cache/*
+/log/*
+!/var/cache/.gitkeep
+!/var/logs/.gitkeep
+
+# Uploads & generated images (keep structure, ignore uploaded media)
+/img/p/*/*
+/img/c/*
+/img/m/*
+/img/su/*
+/img/co/*
+/upload/*
+/download/*
+
+# Dependencies
+/vendor/
+/node_modules/
+/tools/smarty/compile/*
+/tools/smarty/cache/*
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

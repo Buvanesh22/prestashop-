@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Shop.Forms.Help.xlf" source-language="en" target-language="hi" datatype="plaintext">
+    <body>
+      <trans-unit id="6ba73729cf3b0503435d54870d993e8d" approved="yes">
+        <source>Your message here</source>
+        <target state="final">आपका संदेश यहाँ लिखें</target>
+        <note>File: themes/hummingbird/templates/catalog/_partials/product-customization.tpl [Line: 17]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

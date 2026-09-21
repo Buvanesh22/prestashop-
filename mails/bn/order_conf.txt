@@ -1,0 +1,39 @@
+ 
+
+{shop_url}
+
+জনাব/জনাবা{নামের প্রথম অংশ} {নামের শেষ অংশ},
+Thank you for shopping on {shop_name}!
+
+Order details
+
+Order: {order_name} Placed on {date}
+Payment: {payment}
+
+প্রসঙ্গ	পণ্য	একক মূল্য	পরিমান	মোট দাম {products_txt} {discounts_txt}
+পণ্য সমূহ	{total_products}
+মূল্যছাড়	{total_discounts}
+স্থানান্তর	{total_shipping}
+Including total tax	{total_tax_paid}
+মোট পরিশোধ	{total_paid}
+
+স্থানান্তর
+
+বাহক {carrier}
+Payment: {payment}
+Recycled packaging: {recycled_packaging_label}
+
+বিলি ঠিকানা
+
+{delivery_block_txt}
+
+Billing address
+
+{invoice_block_txt}
+
+Follow your order and download your invoice on our store, go to the [Order history and details]({history_url}) section of your customer account.
+
+If you have a guest account, you can follow your order via the [অতিথি ট্র্যাকিং]({guest_tracking_url}) section on our shop.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

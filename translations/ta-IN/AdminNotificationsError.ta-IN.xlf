@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Admin.Notifications.Error.xlf" source-language="en" target-language="ta" datatype="plaintext">
+    <body>
+      <trans-unit id="df7859ac16e724c9b1fba0a364503d72" approved="yes">
+        <source>An error occurred while attempting to upload the file.</source>
+        <target state="final">இந்த கோப்பை பதிவேற்றும்  முயற்சியில் ஒரு பிழை ஏற்பட்டுள்ளது.</target>
+        <note>File: modules/ps_banner/ps_banner.php [Line: 150]</note>
+      </trans-unit>
+      <trans-unit id="20aedd1e6de4dcf8d115b5a7424c58d7" approved="yes">
+        <source>Password is required.</source>
+        <target state="final">கடவுச்சொல் தேவைப்படுகிறது.</target>
+        <note>File: src/PrestaShopBundle/Form/Admin/Sell/Customer/CustomerType.php [Line: 135]</note>
+      </trans-unit>
+      <trans-unit id="b42cd3af71fc00ef268910709255320a" approved="yes">
+        <source>You do not have permission to view this.</source>
+        <target state="final">உங்களுக்கு இதை பார்க்க அனுமதி இல்லை.</target>
+        <note>File: controllers/admin/AdminPdfController.php [Line: 27]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

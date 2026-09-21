@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Emails.Body.xlf" source-language="en" target-language="ta" datatype="plaintext">
+    <body>
+      <trans-unit id="914419aa32f04011357d3b604a86d7eb" approved="yes">
+        <source>Carrier</source>
+        <target state="final">ஊர்தி</target>
+        <note>File: mails/themes/modern/modules/ps_emailalerts/new_order.html.twig [Line: 250]</note>
+      </trans-unit>
+      <trans-unit id="af0f5bdc5be121b9307687aeeae38c17" approved="yes">
+        <source>Delivery address</source>
+        <target state="final">விநியோக முகவரி</target>
+        <note>File: mails/themes/modern/modules/ps_emailalerts/return_slip.html.twig [Line: 214]</note>
+      </trans-unit>
+      <trans-unit id="72d6d7a1885885bb55a565fd1070581a" approved="yes">
+        <source>Import</source>
+        <target state="final">இறக்குமதி செய்</target>
+        <note>File: mails/themes/modern/core/import.html.twig [Line: 3]</note>
+      </trans-unit>
+      <trans-unit id="dc647eb65e6711e155375218212b3964" approved="yes">
+        <source>Password</source>
+        <target state="final">கடவுச்சொல்</target>
+        <note>File: mails/themes/modern/core/password.html.twig [Line: 3]</note>
+      </trans-unit>
+      <trans-unit id="c453a4b8e8d98e82f35b67f433e3b4da" approved="yes">
+        <source>Payment</source>
+        <target state="final">செலுத்துதல்</target>
+        <note>File: mails/themes/modern/core/payment.html.twig [Line: 3]</note>
+      </trans-unit>
+      <trans-unit id="deb10517653c255364175796ace3553f" approved="yes">
+        <source>Product</source>
+        <target state="final">பொருள்</target>
+        <note>File: mails/themes/modern/modules/ps_emailalerts/return_slip.html.twig [Line: 174]</note>
+      </trans-unit>
+      <trans-unit id="068f80c7519d0528fb08e82137a72131" approved="yes">
+        <source>Products</source>
+        <target state="final">பொருட்கள்</target>
+        <note>File: mails/themes/modern/modules/ps_emailalerts/new_order.html.twig [Line: 184]</note>
+      </trans-unit>
+      <trans-unit id="694e8d1f2ee056f98ee488bdc4982d73" approved="yes">
+        <source>Quantity</source>
+        <target state="final">அளவு</target>
+        <note>File: mails/themes/modern/modules/ps_emailalerts/return_slip.html.twig [Line: 175]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

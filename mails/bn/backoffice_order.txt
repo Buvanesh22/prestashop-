@@ -1,0 +1,12 @@
+ 
+
+{shop_url}
+
+জনাব/জনাবা{নামের প্রথম অংশ} {নামের শেষ অংশ},
+
+একটি নতুন অর্ডার আপনার পক্ষ থেকে হয়েছে
+
+Please go on {order_link} to complete the payment.
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)

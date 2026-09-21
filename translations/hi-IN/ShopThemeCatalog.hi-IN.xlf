@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="Shop.Theme.Catalog.xlf" source-language="en" target-language="hi" datatype="plaintext">
+    <body>
+      <trans-unit id="453aceb005ceaf54a47da15fee8b2a26" approved="yes">
+        <source>Pages</source>
+        <target state="final">पृष्ठ</target>
+        <note>File: controllers/front/SitemapController.php [Line: 32]</note>
+      </trans-unit>
+      <trans-unit id="e0626222614bdee31951d84c64e5e9ff" approved="yes">
+        <source>Select</source>
+        <target state="final">चुनें</target>
+        <note>File: themes/hummingbird/templates/customer/_partials/order-detail-return.tpl [Line: 22]</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

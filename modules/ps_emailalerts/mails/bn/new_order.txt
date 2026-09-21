@@ -1,0 +1,39 @@
+ 
+
+{shop_url}
+
+অভিনন্দন
+A new order was placed on {shop_name} by the following customer: {firstname} {lastname} ({email})
+
+Order details
+
+Order: {order_name} Placed on {date}
+Payment: {payment}
+
+প্রসঙ্গ	পণ্য	একক মূল্য	পরিমান	মোট দাম  {items}
+পণ্য সমূহ	{total_products}
+মূল্যছাড়	{total_discounts}
+Gift-wrapping	{total_wrapping}
+স্থানান্তর	{total_shipping}
+Including total tax	{total_tax_paid}
+মোট পরিশোধ	{total_paid}
+
+বাহক
+
+বাহক {carrier}
+Payment: {payment}
+
+বিলি ঠিকানা
+
+{delivery_block_html}
+
+Billing address
+
+{invoice_block_html}
+
+Customer message:
+
+{message}
+
+[{shop_name}]({shop_url})
+Powered by [PrestaShop](https://www.prestashop-project.org/)
