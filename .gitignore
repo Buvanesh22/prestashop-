@@ -24,7 +24,6 @@
 /download/*
 
 # Dependencies
-/vendor/
 /node_modules/
 /tools/smarty/compile/*
 /tools/smarty/cache/*
