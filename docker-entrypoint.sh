@@ -6,17 +6,18 @@ if [ -n "$PORT" ]; then
     sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf 2>/dev/null || true
 fi
 
-# Configure database in app/config/parameters.php if environment variables are provided
-if [ -n "$DB_SERVER" ] || [ -n "$DB_HOST" ]; then
-    DB_HOST_VAL=${DB_SERVER:-$DB_HOST}
-    DB_PORT_VAL=${DB_PORT:-3306}
-    DB_NAME_VAL=${DB_NAME:-prestashop}
-    DB_USER_VAL=${DB_USER:-root}
-    DB_PASSWD_VAL=${DB_PASSWD:-$DB_PASSWORD}
-    DB_PREFIX_VAL=${DB_PREFIX:-ps_}
-    
-    mkdir -p /var/www/html/app/config
-    cat <<EOF > /var/www/html/app/config/parameters.php
+# Determine DB variables with robust fallbacks
+DB_HOST_VAL="${DB_SERVER:-${DB_HOST:-127.0.0.1}}"
+DB_PORT_VAL="${DB_PORT:-3306}"
+DB_NAME_VAL="${DB_NAME:-defaultdb}"
+DB_USER_VAL="${DB_USER:-avnadmin}"
+DB_PASSWD_VAL="${DB_PASSWD:-${DB_PASSWORD:-}}"
+DB_PREFIX_VAL="${DB_PREFIX:-ps_}"
+
+mkdir -p /var/www/html/app/config
+
+# Always create app/config/parameters.php so PrestaShop knows it is already installed
+cat <<EOF > /var/www/html/app/config/parameters.php
 <?php return array (
   'parameters' => 
   array (
@@ -43,9 +44,10 @@ if [ -n "$DB_SERVER" ] || [ -n "$DB_HOST" ]; then
   ),
 );
 EOF
-fi
 
-# Ensure permissions
-chown -R www-data:www-data /var/www/html/var /var/www/html/app/config /var/www/html/img 2>/dev/null || true
+# Ensure cache/log/img/upload directories exist and have write permissions
+mkdir -p /var/www/html/var/cache /var/www/html/var/logs /var/www/html/img /var/www/html/upload
+chown -R www-data:www-data /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload 2>/dev/null || true
+chmod -R 775 /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload 2>/dev/null || true
 
 exec "$@"
