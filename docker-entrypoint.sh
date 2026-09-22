@@ -6,6 +6,15 @@ if [ -n "$PORT" ]; then
     sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf 2>/dev/null || true
 fi
 
+# Ensure .env file exists so Symfony Dotenv does not throw PathException
+if [ ! -f /var/www/html/.env ]; then
+    cat <<'EOF' > /var/www/html/.env
+PS_FF_FRONT_CONTAINER_V2=false
+PS_TRUSTED_PROXIES=127.0.0.1,REMOTE_ADDR
+PS_FF_DEFAULT_THEME=hummingbird
+EOF
+fi
+
 # Determine DB variables with robust fallbacks
 DB_HOST_VAL="${DB_SERVER:-${DB_HOST:-127.0.0.1}}"
 DB_PORT_VAL="${DB_PORT:-3306}"
@@ -60,7 +69,7 @@ rm -rf /var/www/html/var/cache/* 2>/dev/null || true
 
 # Ensure cache/log/img/upload directories exist and have write permissions
 mkdir -p /var/www/html/var/cache /var/www/html/var/logs /var/www/html/img /var/www/html/upload
-chown -R www-data:www-data /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload 2>/dev/null || true
-chmod -R 775 /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload 2>/dev/null || true
+chown -R www-data:www-data /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload /var/www/html/.env 2>/dev/null || true
+chmod -R 775 /var/www/html/var /var/www/html/app/config /var/www/html/img /var/www/html/upload /var/www/html/.env 2>/dev/null || true
 
 exec "$@"
