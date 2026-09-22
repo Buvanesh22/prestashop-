@@ -30,13 +30,16 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache modules
 RUN a2enmod rewrite headers
 
-# Configure PHP settings recommended for PrestaShop
-RUN echo "memory_limit = 512M" > /usr/local/etc/php/conf.d/prestashop.ini \
-    && echo "upload_max_filesize = 64M" >> /usr/local/etc/php/conf.d/prestashop.ini \
-    && echo "post_max_size = 64M" >> /usr/local/etc/php/conf.d/prestashop.ini \
-    && echo "max_execution_time = 300" >> /usr/local/etc/php/conf.d/prestashop.ini \
-    && echo "max_input_vars = 5000" >> /usr/local/etc/php/conf.d/prestashop.ini \
-    && echo "date.timezone = UTC" >> /usr/local/etc/php/conf.d/prestashop.ini
+# Configure PHP settings optimized for Render 512MB RAM limit
+RUN echo "memory_limit = 256M" > /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "upload_max_filesize = 32M" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "post_max_size = 32M" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "max_execution_time = 120" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "max_input_vars = 3000" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "date.timezone = UTC" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "opcache.enable = 1" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "opcache.memory_consumption = 64" >> /usr/local/etc/php/conf.d/prestashop.ini \
+    && echo "opcache.max_accelerated_files = 8000" >> /usr/local/etc/php/conf.d/prestashop.ini
 
 WORKDIR /var/www/html
 

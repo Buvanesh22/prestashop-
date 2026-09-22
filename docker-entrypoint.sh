@@ -1,6 +1,17 @@
 #!/bin/bash
 set -e
 
+# Limit Apache worker processes to stay well under Render 512MB RAM limit
+cat <<EOF > /etc/apache2/mods-available/mpm_prefork.conf
+<IfModule mpm_prefork_module>
+    StartServers             2
+    MinSpareServers          1
+    MaxSpareServers          2
+    MaxRequestWorkers        4
+    MaxConnectionsPerChild   100
+</IfModule>
+EOF
+
 # Configure Apache Port and ServerName for Render
 APACHE_PORT="${PORT:-80}"
 echo "ServerName localhost" >> /etc/apache2/apache2.conf 2>/dev/null || true
