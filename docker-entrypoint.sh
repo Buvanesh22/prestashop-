@@ -16,7 +16,7 @@ DB_PREFIX_VAL="${DB_PREFIX:-ps_}"
 
 mkdir -p /var/www/html/app/config
 
-# Always create app/config/parameters.php so PrestaShop knows it is already installed
+# Always create app/config/parameters.php with clean parameters
 cat <<EOF > /var/www/html/app/config/parameters.php
 <?php return array (
   'parameters' => 
@@ -44,6 +44,19 @@ cat <<EOF > /var/www/html/app/config/parameters.php
   ),
 );
 EOF
+
+# Support enabling Debug Mode via environment variable PS_DEV_MODE=true
+if [ "$PS_DEV_MODE" = "true" ] || [ "$PS_DEV_MODE" = "1" ]; then
+    cat <<'EOF' > /var/www/html/config/defines_custom.inc.php
+<?php
+define('_PS_MODE_DEV_', true);
+EOF
+else
+    rm -f /var/www/html/config/defines_custom.inc.php
+fi
+
+# Clear stale Symfony/PrestaShop cache on container start
+rm -rf /var/www/html/var/cache/* 2>/dev/null || true
 
 # Ensure cache/log/img/upload directories exist and have write permissions
 mkdir -p /var/www/html/var/cache /var/www/html/var/logs /var/www/html/img /var/www/html/upload
