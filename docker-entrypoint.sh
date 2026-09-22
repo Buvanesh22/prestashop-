@@ -1,10 +1,23 @@
 #!/bin/bash
 set -e
 
-# Support Render custom PORT
-if [ -n "$PORT" ]; then
-    sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf 2>/dev/null || true
-fi
+# Configure Apache Port and ServerName for Render
+APACHE_PORT="${PORT:-80}"
+echo "ServerName localhost" >> /etc/apache2/apache2.conf 2>/dev/null || true
+echo "Listen 0.0.0.0:${APACHE_PORT}" > /etc/apache2/ports.conf
+cat <<EOF > /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:${APACHE_PORT}>
+    DocumentRoot /var/www/html
+    <Directory /var/www/html>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+a2ensite 000-default.conf 2>/dev/null || true
 
 # Ensure .env file exists so Symfony Dotenv does not throw PathException
 if [ ! -f /var/www/html/.env ]; then
