@@ -13,7 +13,7 @@
  * The code below can be also managed by settings in backoffice. The interface hardcodes the value into this file.
  */
 if (!defined('_PS_MODE_DEV_')) {
-define('_PS_MODE_DEV_', false);
+    define('_PS_MODE_DEV_', (getenv('PS_DEV_MODE') === 'false' ? false : true));
 }
 if (!defined('_PS_DISPLAY_COMPATIBILITY_WARNING_')) {
 define('_PS_DISPLAY_COMPATIBILITY_WARNING_', false);

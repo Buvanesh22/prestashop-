@@ -2,6 +2,7 @@ FROM php:8.1-apache
 
 # Install system dependencies and PHP extensions required by PrestaShop
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libpng-dev \

@@ -38,14 +38,20 @@ class DbMySQLiCore extends Db
             $socket = $this->server;
         }
 
-        if ($socket) {
-            /* @phpstan-ignore-next-line */
-            $this->link = @new mysqli(null, $this->user, $this->password, $this->database, 0, $socket);
-        } elseif ($port) {
-            $this->link = @new mysqli($server, $this->user, $this->password, $this->database, (int) $port);
-        } else {
-            $this->link = @new mysqli($this->server, $this->user, $this->password, $this->database);
+        $this->link = mysqli_init();
+        if (file_exists('/etc/ssl/certs/ca-certificates.crt')) {
+            @$this->link->ssl_set(null, null, '/etc/ssl/certs/ca-certificates.crt', null, null);
         }
+        if (defined('MYSQLI_OPT_SSL_VERIFY_SERVER_CERT')) {
+            @$this->link->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, false);
+        }
+        $client_flags = defined('MYSQLI_CLIENT_SSL') ? MYSQLI_CLIENT_SSL : 0;
+
+        $host_target = $socket ? null : ($server ?: $this->server);
+        $port_target = $port ? (int) $port : 3306;
+        $socket_target = $socket ?: null;
+
+        @$this->link->real_connect($host_target, $this->user, $this->password, $this->database, $port_target, $socket_target, $client_flags);
 
         // Do not use object way for error because this work bad before PHP 5.2.9
         if (mysqli_connect_error()) {
